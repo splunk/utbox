@@ -1,4 +1,3 @@
-![Custom badge](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fsplunkbasebadge.livehybrid.com%2Fv1%2Finstalls%2F2734)
 ![Custom badge](https://img.shields.io/endpoint?color=%23&style=flat-square&url=https%3A%2F%2Fsplunkbasebadge.livehybrid.com%2Fv1%2Fdownloads%2F2734)
 ![contributors-shield](https://img.shields.io/github/contributors/splunk/utbox.svg?style=flat-square)
 
@@ -126,7 +125,17 @@ make package
 
 Please refer to the [License on Splunkbase.](https://cdn.apps.splunk.com/static/misc/eula.html)
 
+## Bug Fixes / Enhancement Requests
+
+🐞 ✍🏼 💡 Create [issue](https://github.com/splunk/utbox/issues/new) with appropriate label to submit the request.
+
+## Troubleshooting
+
+**SPL**: `index=_internal ERROR *bin/ut_*py`
+
+
 ## Acknowledgments
 
 * Cedric Le Roux
 * [Ian Forrest](https://github.com/iforrest)
+* [Daniel Federschmidt](https://github.com/dfederschmidt)
