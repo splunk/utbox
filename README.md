@@ -115,8 +115,9 @@ Please find below some selected samples of commands and their respective output.
 
 If you want to use docker compose, you can run
 ```
-docker compose
+docker compose up
 ```
+to get a local Splunk environment with the app mounted into `$SPLUNK/etc/apps/utbox.
 
 ### Running Tests
 
