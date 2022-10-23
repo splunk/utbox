@@ -113,12 +113,25 @@ Please find below some selected samples of commands and their respective output.
 1. Clone this repository
 2. Symlink the `utbox` directory to your `$SPLUNK_HOME/etc/apps/` directory.
 
+If you want to use docker compose, you can run
+```
+docker compose
+```
+
+### Running Tests
+
+```
+make test
+```
+
 ### Creating a release bundle
 
 Run the `package` target in the provided Makefile.
 ```
 make package
 ```
+
+This will create an app package in `dist/utbox.tar.gz`
 
 
 ## License
