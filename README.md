@@ -153,3 +153,5 @@ Please refer to the [License on Splunkbase.](https://cdn.apps.splunk.com/static/
 * Cedric Le Roux
 * [Ian Forrest](https://github.com/iforrest)
 * [Daniel Federschmidt](https://github.com/dfederschmidt)
+* [Mayur Pipaliya](https://github.com/mayurah)
+* [Gurkan Gokdemir](https://github.com/ggokdemir)
