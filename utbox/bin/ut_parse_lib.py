@@ -8,7 +8,7 @@ import codecs
 import ut_log
 
 try:
-	from urlparse import urlparse
+	from urllib.parse import urlparse
 except ImportError:
 	from urllib.parse import urlparse
 

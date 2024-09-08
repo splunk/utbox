@@ -2,7 +2,9 @@ import os
 import re
 import sys
 import csv
-
+from io import open
+from six.moves import range
+from six.moves import zip
 
 def ngramsplit(word, length):
     """
@@ -86,7 +88,7 @@ header = ['word', 'ut_bayesian']
 csv_in = csv.DictReader(
     sys.stdin)  # automatically use the first line as header
 csv_out = csv.DictWriter(sys.stdout, header)
-csv_out.writerow(dict(zip(header, header)))  # write header
+csv_out.writerow(dict(list(zip(header, header))))  # write header
 
 for row in csv_in:
     word = row['word'].lower().strip()

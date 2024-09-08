@@ -1,6 +1,7 @@
 import sys
 import csv
 import json
+from six.moves import zip
 """
 # a-z
 set_az = set(chr(c) for c in range(0x61, 0x7b))
@@ -73,7 +74,7 @@ header = ['word', 'set', 'ut_countset']
 csv_in = csv.DictReader(
     sys.stdin)  # automatically use the first line as header
 csv_out = csv.DictWriter(sys.stdout, header)
-csv_out.writerow(dict(zip(header, header)))  # write header
+csv_out.writerow(dict(list(zip(header, header))))  # write header
 
 for row in csv_in:
     word = row['word'].strip()

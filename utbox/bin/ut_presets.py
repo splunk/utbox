@@ -1,7 +1,9 @@
+from __future__ import print_function
 import re
 import sys
 import csv
 import json
+from six.moves import range
 
 # a-z
 set_az = set(chr(c) for c in range(0x61, 0x7b))
@@ -39,7 +41,7 @@ PRESETS = {
 
 PATTERNS = {}
 #re.compile("([0123456789]+)")
-for (pname, pchars) in PRESETS.items():
+for (pname, pchars) in list(PRESETS.items()):
     re_str = "([%s]+)" % re.escape(''.join(pchars))
     PATTERNS[pname] = re.compile(re_str)
 

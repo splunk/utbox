@@ -4,6 +4,7 @@ import csv
 
 import ut_log
 import ut_parse_lib
+from six.moves import zip
 
 """
 ut_parse_simple is just a wrapper to python's urlparse so we don't
@@ -20,7 +21,7 @@ header  = ['url',
 
 csv_in  = csv.DictReader(sys.stdin) # automatically use the first line as header
 csv_out = csv.DictWriter(sys.stdout, header)
-csv_out.writerow(dict(zip(header,header))) # write header
+csv_out.writerow(dict(list(zip(header,header)))) # write header
 
 for row in csv_in:
 	url = row['url'].strip()

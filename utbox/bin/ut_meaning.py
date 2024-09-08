@@ -2,6 +2,9 @@ import os
 import re
 import sys
 import csv
+from io import open
+from six.moves import range
+from six.moves import zip
 """
 Module that compute a ratio between the word length and the length of it's known composing words
 Use the wordlist meaning.dic (one word per line). This list is loaded once per batch of 50,000
@@ -72,7 +75,7 @@ header = ['word', 'ut_meaning_ratio']
 csv_in = csv.DictReader(
     sys.stdin)  # automatically use the first line as header
 csv_out = csv.DictWriter(sys.stdout, header)
-csv_out.writerow(dict(zip(header, header)))  # write header
+csv_out.writerow(dict(list(zip(header, header))))  # write header
 
 for row in csv_in:
     word = row['word'].strip()
