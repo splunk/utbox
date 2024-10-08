@@ -12,7 +12,7 @@ try:
 except ImportError:
 	from urllib.parse import urlparse
 
-preg_rfc1808 = re.compile("://")
+preg_rfc1808 = re.compile("^[a-z+]*://")
 preg_ipv4 = re.compile("^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
 
 #############
@@ -180,8 +180,8 @@ def findTLD(netloc, TLDList):
             if len(items) > 0:
                 TLD = '.'.join(items)
 
-    if (TLD == None) and len(items) > 0:
-        TLD = '.'.join(items)
+    if (TLD == None):
+        TLD = parts[-1]
 
     return TLD
 
