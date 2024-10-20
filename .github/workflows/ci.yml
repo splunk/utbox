@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: ["7.3.9","7.2.10.1","8.2"]
+        version: ["7.3.9","7.2.10.1","8.2","9.3"]
     services:
       splunk:
         image: splunk/splunk:${{ matrix.version }}
