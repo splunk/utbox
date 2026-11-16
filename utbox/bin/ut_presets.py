@@ -73,8 +73,6 @@ def suites(word, wordset):
 
     sets = wordset.split(',')
     for s in sets:
-        print(s)
-
         if not s in PRESETS:
             continue
 
