@@ -13,7 +13,7 @@ except ImportError:
 	from urllib.parse import urlparse
 
 preg_rfc1808 = re.compile("://")
-preg_ipv4 = re.compile("^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
+preg_ipv4 = re.compile(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
 
 #############
 # FUNCTIONS #
@@ -38,7 +38,7 @@ def _loadIANAList(filename="suffix_list_iana.dat"):
     line = f.readline()
     while line:
         # skip comment or empty line
-        if re.search('^\s*(#|$)', line):
+        if re.search(r'^\s*(#|$)', line):
             line = f.readline()
             continue
 
@@ -74,13 +74,13 @@ def _loadMozillaList():
     line = f.readline()
     while line:
         # skip comment or empty line
-        if re.search('^(\s*$|//)', line):
+        if re.search(r'^(\s*$|//)', line):
             line = f.readline()
             continue
 
         # stop at the first whitespace as stated on https://publicsuffix.org/list/
         line = line.lower()
-        ret = re.search('^\s*([^\s]+)', line)
+        ret = re.search(r'^\s*([^\s]+)', line)
         if ret:
             tld_raw = ret.group(1)
             #tld_pun = tld_raw.encode('idna')
